@@ -5,14 +5,16 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func count(a, b, increase int) (int, int) {
-	res := a + b + increase
-	tenCount := res / 10
+/*
+Задача:
+	На вход подается два числа, представленных в обратном порядке:
+	425: 5 -> 2 -> 4
+	126: 6 -> 2 -> 1
 
-	return tenCount, res % 10
-}
-
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+	Необходимо вернуть сумму этих чисел в таком же виде:
+	1 -> 5 -> 5
+*/
+func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	increase := 0
 
 	res := &ListNode{}
@@ -52,4 +54,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	return res.Next
+}
+
+func count(a, b, increase int) (int, int) {
+	res := a + b + increase
+	tenCount := res / 10
+
+	return tenCount, res % 10
 }

@@ -1,6 +1,7 @@
 package tasks
 
-func search(nums []int, target int) int {
+// Найти элемент за log(n) в частично отсортированном массиве, например, [4, 5, 6, 1, 2, 3]
+func Search(nums []int, target int) int {
 	if len(nums) == 0 {
 		return -1
 	}
