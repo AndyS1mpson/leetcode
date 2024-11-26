@@ -33,3 +33,8 @@ func (s *Stack[T]) Push(val T) {
 func (s *Stack[T]) Len() int {
 	return len(s.data)
 }
+
+// IsEmpty пустой ли стэк
+func (s *Stack[T]) IsEmpty() bool {
+	return s.Len() == 0
+}
