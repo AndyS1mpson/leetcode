@@ -79,7 +79,7 @@ func Bfs(grid [][]byte, r int, c int) {
 
 			if x >= 0 && x < len(grid) && y >= 0 && y < len(grid[x]) && grid[x][y] == '1' {
 				q = append(q, [2]int{x, y})
-				grid[x][y] = 2
+				grid[x][y] = '2'
 			}
 		}
 	}

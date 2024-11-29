@@ -36,7 +36,7 @@ package graph
 			["X","X","X"],
 		]
 
-Сложность:
+Сложность: O(NM)
 */
 func Solve(board [][]byte) {
 	if len(board) == 0 {
