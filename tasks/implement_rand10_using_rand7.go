@@ -24,7 +24,7 @@ func Rand10() int {
 	result := 40
 
 	for result >= 40 {
-		result = 7*(rand7()-1) + (rand7() - 1)
+		result = 7*(rand7()-1) + rand7()
 	}
 
 	return result%10 + 1
