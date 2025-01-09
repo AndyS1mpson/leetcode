@@ -1,6 +1,9 @@
 package graph
 
-import "leetcode/structs"
+import (
+	"leetcode/structs"
+	"leetcode/tasks/custom_structs"
+)
 
 /*
 Задача:
@@ -15,7 +18,7 @@ import "leetcode/structs"
 	Input: root = [1,2,3,4,5,null,8,null,null,6,7,9]
 	Output: [4,2,6,5,7,1,3,9,8]
 */
-func InorderTraversal(root *TreeNode) []int {
+func InorderTraversal(root *custom_structs.TreeNode) []int {
 	result := []int{}
 
 	if root == nil {
@@ -24,7 +27,7 @@ func InorderTraversal(root *TreeNode) []int {
 
 	current := root
 
-	stack := structs.NewStack[*TreeNode]()
+	stack := structs.NewStack[*custom_structs.TreeNode]()
 
 	for current != nil || !stack.IsEmpty() {
 		for current != nil {
@@ -43,7 +46,7 @@ func InorderTraversal(root *TreeNode) []int {
 	return result
 }
 
-func InorderTraversalV2(root *TreeNode) []int {
+func InorderTraversalV2(root *custom_structs.TreeNode) []int {
 	if root == nil {
 		return nil
 	}

@@ -1,4 +1,6 @@
-package tasks
+package linked_list
+
+import "leetcode/tasks/custom_structs"
 
 /*
 Задача:
@@ -9,8 +11,8 @@ package tasks
 	Output: [1,1,2,3,4,4]
 Сложность: O(n)
 */
-func MergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	result := &ListNode{}
+func MergeTwoLists(list1 *custom_structs.ListNode, list2 *custom_structs.ListNode) *custom_structs.ListNode {
+	result := &custom_structs.ListNode{}
 
 	temp := result
 

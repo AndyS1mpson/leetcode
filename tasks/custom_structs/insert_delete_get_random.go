@@ -1,4 +1,4 @@
-package tasks
+package custom_structs
 
 import "golang.org/x/exp/rand"
 

@@ -1,12 +1,9 @@
 package graph
 
-import "math"
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import (
+	"leetcode/tasks/custom_structs"
+	"math"
+)
 
 /*
 Задача:
@@ -25,14 +22,14 @@ type TreeNode struct {
 	Input: root = [5,1,4,null,null,3,6]
 	Output: false
 */
-func IsValidBST(root *TreeNode) bool {
+func IsValidBST(root *custom_structs.TreeNode) bool {
 	maxVal := math.MaxInt
 	minVal := math.MinInt
 
 	return validate(root, minVal, maxVal)
 }
 
-func validate(root *TreeNode, min int, max int) bool {
+func validate(root *custom_structs.TreeNode, min int, max int) bool {
 	if root == nil {
 		return true
 	}

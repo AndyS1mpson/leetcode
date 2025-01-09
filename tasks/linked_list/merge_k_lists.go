@@ -1,13 +1,16 @@
-package tasks
+package linked_list
 
-import "container/heap"
+import (
+	"container/heap"
+	"leetcode/tasks/custom_structs"
+)
 
 /*
 Задача:
 
 	Дано k отсортированных списков, необходимо смерджить их и в результате получить отсортированный список
 */
-func MergeKLists(lists []*ListNode) *ListNode {
+func MergeKLists(lists []*custom_structs.ListNode) *custom_structs.ListNode {
 	pq := make(PQ, 0)
 	for _, node := range lists {
 		if node != nil {
@@ -20,12 +23,12 @@ func MergeKLists(lists []*ListNode) *ListNode {
 	}
 	heap.Init(&pq)
 
-	head := &ListNode{}
+	head := &custom_structs.ListNode{}
 	dummyHead := head
 
 	for len(pq) > 0 {
 		min := heap.Pop(&pq)
-		minNode := min.(*ListNode)
+		minNode := min.(*custom_structs.ListNode)
 		head.Next = minNode
 		head = head.Next
 
@@ -36,7 +39,7 @@ func MergeKLists(lists []*ListNode) *ListNode {
 	return dummyHead.Next
 }
 
-type PQ []*ListNode
+type PQ []*custom_structs.ListNode
 
 func (pq PQ) Len() int {
 	return len(pq)
@@ -51,7 +54,7 @@ func (pq PQ) Less(a, b int) bool {
 }
 
 func (pq *PQ) Push(nodeInterface interface{}) {
-	node := nodeInterface.(*ListNode)
+	node := nodeInterface.(*custom_structs.ListNode)
 	*pq = append(*pq, node)
 }
 

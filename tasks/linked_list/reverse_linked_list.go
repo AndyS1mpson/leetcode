@@ -1,24 +1,25 @@
-package tasks
+package linked_list
 
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
+import "leetcode/tasks/custom_structs"
 
+/*
 Задача:
+
 	Дана голова однонаправленного массива, нужно развернуть лист
+
 Пример:
+
 	Input: head = [1,2,3,4,5]
 	Output: [5,4,3,2,1]
- */
- func ReverseList(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil {
-        return head
-    }
 
-	reversed := &ListNode{
+Сложность: O(N)
+*/
+func ReverseList(head *custom_structs.ListNode) *custom_structs.ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	reversed := &custom_structs.ListNode{
 		Next: head,
 	}
 

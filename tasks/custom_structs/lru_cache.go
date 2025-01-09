@@ -1,4 +1,4 @@
-package tasks
+package custom_structs
 
 /*
 Задача:

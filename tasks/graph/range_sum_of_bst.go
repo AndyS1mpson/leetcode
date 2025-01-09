@@ -1,10 +1,6 @@
-package binary_search
+package graph
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "leetcode/tasks/custom_structs"
 
 /*
 Задача:
@@ -18,9 +14,9 @@ type TreeNode struct {
 	Output: 32
 	Explanation: Ноды 7, 10, и 15 принадлежат [7, 15]. 7 + 10 + 15 = 32.
 
-Сложность:
+Сложность: O(N)
 */
-func RangeSumBST(root *TreeNode, low int, high int) int {
+func RangeSumBST(root *custom_structs.TreeNode, low int, high int) int {
 	if root == nil {
 		return 0
 	}

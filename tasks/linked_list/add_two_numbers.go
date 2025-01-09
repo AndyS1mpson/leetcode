@@ -1,9 +1,6 @@
-package tasks
+package linked_list
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "leetcode/tasks/custom_structs"
 
 /*
 Задача:
@@ -14,14 +11,14 @@ type ListNode struct {
 	Необходимо вернуть сумму этих чисел в таком же виде:
 	1 -> 5 -> 5
 */
-func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func AddTwoNumbers(l1 *custom_structs.ListNode, l2 *custom_structs.ListNode) *custom_structs.ListNode {
 	increase := 0
 
-	res := &ListNode{}
+	res := &custom_structs.ListNode{}
 	tmpRes := res
 
 	for l1 != nil || l2 != nil || increase != 0 {
-		tmpRes.Next = &ListNode{}
+		tmpRes.Next = &custom_structs.ListNode{}
 		tmpRes = tmpRes.Next
 
 		if l1 != nil && l2 != nil {
