@@ -1,4 +1,4 @@
-package tasks
+package sum
 
 // Необходимо вернуть индексы двух любых элементов, сумма которых == target
 func TwoSum(nums []int, target int) []int {
